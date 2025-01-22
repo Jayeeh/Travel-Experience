@@ -1,0 +1,42 @@
+<%- include('includes/header') %>
+
+<div class="container">
+    <h2>Edit Post</h2>
+
+    <% if (locals.errors && errors.length) { %>
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                <% errors.forEach(function(message) { %>
+                    <li><%= message %></li>
+                <% }) %>
+            </ul>
+        </div>
+    <% } %>
+
+    <form action="/post/<%= post.id %>/edit" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="post-title" class="form-label">Title</label>
+            <input type="text" name="title" id="post-title" class="form-control" value="<%= post.title %>">
+        </div>
+        <div class="mb-3">
+            <label for="post-body" class="form-label">Content</label>
+            <textarea name="body" id="post-body" class="form-control" rows="8"><%= post.body %></textarea>
+            <div class="form-text">You can use Markdown formatting.</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <% if (post.image) { %>
+                <div class="mb-2">
+                    <img src="<%= post.image %>" alt="Current post image" class="img-fluid rounded" style="max-height: 200px;">
+                    <p class="form-text">Current image</p>
+                </div>
+            <% } %>
+            <input type="file" name="image" id="image" class="form-control" accept="image/*">
+            <div class="form-text">Upload a new image to replace the current one (optional)</div>
+        </div>
+        <button class="btn btn-primary">Save Changes</button>
+        <a href="/post/<%= post.id %>" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+
+<%- include('includes/footer') %>

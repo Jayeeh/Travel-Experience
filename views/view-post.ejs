@@ -1,0 +1,53 @@
+<%- include('includes/header') %>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+                <h2 class="card-title mb-0"><%= post.title %></h2>
+               
+            </div>
+
+            <div class="text-muted mb-4">
+                <small>Posted by <%= post.author %> on <%= new Date(post.createdDate).toLocaleString() %></small>
+            </div>
+
+            <% if (post.image) { %>
+                <div class="mb-4 text-center">
+                    <img src="<%= post.image %>" alt="Post image" class="img-fluid rounded" style="width: 50%; height: auto;">
+                </div>
+            <% } %>
+            
+            <div class="content">
+                <%- filterUserHTML(post.body) %>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="mt-4 d-flex justify-content-between align-items-center">
+        <div>
+            <a href="/home" class="btn btn-custom-gray">
+                <i class="fas fa-arrow-left"></i> Back to Posts
+            </a>
+        </div>
+        <% if (locals.userid) { %>
+            <p style="display: none;">Debug - locals.userid: <%= locals.userid %>, post.authorid: <%= post.authorid %></p>
+        <% } %>
+        <% if (locals.userid && parseInt(locals.userid) === post.authorid) { %>
+            <div>
+                <a href="/post/<%= post.id %>/edit" class="btn btn-edit me-2">
+                    <i class="fas fa-edit"></i> Edit
+                </a>
+                <form action="/post/<%= post.id %>/delete" method="POST" class="d-inline">
+                    <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this post?')">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+    
+</div>
+
+<%- include('includes/footer') %>

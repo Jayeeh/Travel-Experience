@@ -1,0 +1,77 @@
+<%- include('includes/header') %>
+
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-text">
+                <h1 class="display-4 fw-bold">Share Your Stories</h1>
+                <p class="lead mb-4">Join our community of writers and readers. Create, share, and discover amazing blog posts.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="auth-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="auth-container">
+                    <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Register</button>
+                        </li>
+                    </ul>
+                    
+                    <div class="tab-content p-4" id="authTabsContent">
+                        <!-- Login Form -->
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <form action="/login" method="POST">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="username" id="username-login" class="form-control" placeholder="Username" autocomplete="off">
+                                    <label for="username-login">Username</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password" id="password-login" class="form-control" placeholder="Password">
+                                    <label for="password-login">Password</label>
+                                </div>
+                                <button class="btn btn-primary w-100">Login</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Register Form -->
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form action="/register" method="POST">
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="username" id="username-register" class="form-control" placeholder="Username" autocomplete="off">
+                                    <label for="username-register">Username</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" name="password" id="password-register" class="form-control" placeholder="Password">
+                                    <label for="password-register">Password</label>
+                                </div>
+                                <button class="btn btn-primary w-100">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% if (locals.errors && errors.length) { %>
+    <div class="container mt-4">
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                <% errors.forEach(function(message) { %>
+                    <li><%= message %></li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+<% } %>
+
+<%- include('includes/footer') %>

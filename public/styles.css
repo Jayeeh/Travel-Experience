@@ -1,0 +1,525 @@
+/* 
+ * J&K Travel Blog Styles
+ * This file contains all the custom styles for the blog application.
+ * Uses a modern, clean design with consistent spacing and colors.
+ */
+
+/* Custom button styles */
+.btn-custom-gray {
+    background-color: #6c757d;  /* Dark gray background */
+    color: white;  /* White text */
+    border: none;  /* No border */
+    transition: all 0.3s ease;  /* Smooth hover effect */
+}
+
+.btn-custom-gray:hover {
+    background-color: #5a6268;  /* Darker gray on hover */
+    color: white;  /* White text on hover */
+}
+
+/* Card styles */
+.card {
+    transition: transform 0.2s ease;  /* Smooth hover effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+.card:hover {
+    transform: translateY(-5px);  /* Card lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* Enhanced shadow on hover */
+}
+
+/* Button group styles */
+.post-actions {
+    position: absolute;  /* Position relative to parent */
+    bottom: 15px;  /* Position at bottom */
+    right: 15px;  /* Position at right */
+}
+
+.post-actions .btn {
+    margin-left: 5px;  /* Space between buttons */
+    background-color: #6c757d;  /* Dark gray background */
+    color: white;  /* White text */
+    border: none;  /* No border */
+}
+
+.post-actions .btn:hover {
+    background-color: #5a6268;  /* Darker gray on hover */
+    color: white;  /* White text on hover */
+}
+
+.post-actions .btn-delete {
+    background-color: #dc3545;  /* Red background */
+}
+
+.post-actions .btn-delete:hover {
+    background-color: #c82333;  /* Darker red on hover */
+}
+
+/* Make cards have consistent height */
+.card-body {
+    position: relative;  /* Position relative to parent */
+    padding-bottom: 20px;  /* Space for buttons */
+}
+
+/* Navigation improvements */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* Subtle shadow */
+}
+
+/* Post content styles */
+.content {
+    line-height: 1.8;  /* Spacious line height */
+    font-size: 1.1rem;  /* Slightly larger font */
+    color: #2c3e50;  /* Dark gray text */
+    max-width: 1600px;  /* Maximum width */
+    margin: 2rem auto;  /* Centered with margin */
+    padding: 0 1.5rem;  /* Padding for readability */
+    word-wrap: break-word;  /* Break long words */
+    overflow-wrap: break-word;  /* Break long words */
+    hyphens: auto;  /* Hyphenate long words */
+    text-align: justify;  /* Justify text */
+    text-justify: inter-word;  /* Justify text with inter-word spacing */
+    letter-spacing: 0.01em;  /* Slightly increased letter spacing */
+}
+
+.content p {
+    margin-bottom: 1.8rem;  /* Spacious margin */
+    text-indent: 1.5em;  /* Indent paragraphs */
+}
+
+.content p:first-of-type {
+    text-indent: 0;  /* No indent for first paragraph */
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    color: #2c3e50;  /* Dark gray headings */
+    margin-top: 2.5rem;  /* Spacious margin */
+    margin-bottom: 1.5rem;  /* Spacious margin */
+    font-weight: 600;  /* Bold headings */
+    text-align: left;  /* Left-aligned headings */
+}
+
+.content ul, .content ol {
+    padding-left: 2rem;  /* Indent lists */
+    margin-bottom: 1.5rem;  /* Spacious margin */
+}
+
+.content li {
+    margin-bottom: 0.5rem;  /* Spacious margin */
+}
+
+.content a {
+    color: #3498db;  /* Blue links */
+    text-decoration: none;  /* No underline */
+    border-bottom: 1px solid transparent;  /* Transparent border */
+    transition: border-color 0.2s ease;  /* Smooth hover effect */
+}
+
+.content a:hover {
+    border-bottom-color: #3498db;  /* Blue border on hover */
+}
+
+.content blockquote {
+    border-left: 4px solid #e5e7eb;  /* Light gray border */
+    padding-left: 1rem;  /* Indent blockquote */
+    margin-left: 0;  /* No margin */
+    margin-right: 0;  /* No margin */
+    font-style: italic;  /* Italic text */
+    color: #4a5568;  /* Dark gray text */
+}
+
+.content code {
+    background-color: #f8f9fa;  /* Light gray background */
+    padding: 0.2em 0.4em;  /* Spacious padding */
+    border-radius: 3px;  /* Rounded corners */
+    font-size: 0.9em;  /* Slightly smaller font */
+    font-family: monospace;  /* Monospace font */
+}
+
+.content pre {
+    background-color: #f8f9fa;  /* Light gray background */
+    padding: 1rem;  /* Spacious padding */
+    border-radius: 5px;  /* Rounded corners */
+    overflow-x: auto;  /* Horizontal scrollbar */
+    margin: 1.5rem 0;  /* Spacious margin */
+}
+
+.content img {
+    margin: 1.5rem auto;  /* Centered with margin */
+    display: block;  /* Block-level image */
+    max-width: 100%;  /* Maximum width */
+    height: auto;  /* Automatic height */
+    border-radius: 5px;  /* Rounded corners */
+}
+
+.content hr {
+    margin: 2.5rem 0;  /* Spacious margin */
+    border: none;  /* No border */
+    border-top: 1px solid #e5e7eb;  /* Light gray border */
+}
+
+/* Image styles */
+.card-img-top {
+    height: 200px;  /* Fixed height */
+    object-fit: cover;  /* Maintain aspect ratio */
+    border-bottom: 1px solid #dee2e6;  /* Light gray border */
+}
+
+/* Edit and delete button styles */
+.btn-edit {
+    background-color: #3498db !important;  /* Blue for edit */
+    color: white !important;  /* White text */
+    border: none !important;  /* No border */
+    transition: background-color 0.2s ease;  /* Smooth hover effect */
+}
+
+.btn-edit:hover {
+    background-color: #2980b9 !important;  /* Darker blue on hover */
+}
+
+.btn-delete {
+    background-color: #e74c3c !important;  /* Red for delete */
+    color: white !important;  /* White text */
+    border: none !important;  /* No border */
+    transition: background-color 0.2s ease;  /* Smooth hover effect */
+}
+
+.btn-delete:hover {
+    background-color: #c0392b !important;  /* Darker red on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);  /* Beautiful gradient background */
+    color: white;  /* White text */
+    padding: 5rem 0;  /* Spacious padding */
+    margin-top: -2rem;  /* Negative margin */
+    margin-bottom: 2rem;  /* Spacious margin */
+}
+
+.hero-text h1 {
+    margin-bottom: 1.5rem;  /* Spacious margin */
+    font-weight: 800;  /* Bold headings */
+}
+
+.hero-text .lead {
+    font-size: 1.25rem;  /* Slightly larger font */
+    opacity: 0.9;  /* Slightly transparent text */
+}
+
+/* Auth Container */
+.auth-container {
+    background: white;  /* White background */
+    border-radius: 1rem;  /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    overflow: hidden;  /* Contain content */
+}
+
+.nav-tabs {
+    border: none;  /* No border */
+    background: #f8fafc;  /* Light gray background */
+}
+
+.nav-tabs .nav-link {
+    border: none;  /* No border */
+    padding: 1rem 2rem;  /* Spacious padding */
+    color: #64748b;  /* Dark gray text */
+    font-weight: 500;  /* Medium font weight */
+    transition: all 0.2s ease;  /* Smooth hover effect */
+}
+
+.nav-tabs .nav-link:hover {
+    color: #3b82f6;  /* Blue text on hover */
+}
+
+.nav-tabs .nav-link.active {
+    background: white;  /* White background */
+    color: #3b82f6;  /* Blue text */
+    font-weight: 600;  /* Bold font weight */
+}
+
+.tab-content {
+    padding: 2rem !important;  /* Spacious padding */
+}
+
+/* Form Styling */
+.form-floating > .form-control {
+    padding: 1rem 0.75rem;  /* Spacious padding */
+}
+
+.form-floating > .form-control:focus {
+    border-color: #3b82f6;  /* Blue border on focus */
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);  /* Blue glow on focus */
+}
+
+.btn-primary {
+    background: #3b82f6;  /* Blue background */
+    border: none;  /* No border */
+    padding: 0.8rem 1.5rem;  /* Spacious padding */
+    font-weight: 500;  /* Medium font weight */
+    transition: all 0.2s ease;  /* Smooth hover effect */
+}
+
+.btn-primary:hover {
+    background: #2563eb;  /* Darker blue on hover */
+    transform: translateY(-1px);  /* Slight lift effect */
+}
+
+/* Error Messages */
+.alert-danger {
+    background: #fee2e2;  /* Light red background */
+    border: none;  /* No border */
+    color: #991b1b;  /* Dark red text */
+    border-radius: 0.5rem;  /* Rounded corners */
+}
+
+.alert-danger ul {
+    padding-left: 1.5rem;  /* Indent list */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        text-align: center;  /* Centered text */
+        padding: 3rem 0;  /* Spacious padding */
+    }
+    
+    .hero-text {
+        margin-bottom: 2rem;  /* Spacious margin */
+    }
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;  /* Modern, clean font */
+    padding-top: 70px;  /* Space for fixed navbar */
+    min-height: 100vh;  /* Full viewport height */
+    display: flex;  /* Flexible layout */
+    flex-direction: column;  /* Footer sticks to bottom */
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);  /* Beautiful gradient background */
+    padding: 1rem 0;  /* Spacious padding */
+}
+
+.navbar-brand {
+    color: white;  /* White text */
+    font-weight: 700;  /* Bold font weight */
+    font-size: 1.4rem;  /* Slightly larger font */
+}
+
+.navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.9);  /* Slightly transparent text on hover */
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);  /* Slightly transparent text */
+    font-weight: 500;  /* Medium font weight */
+    padding: 0.5rem 1rem;  /* Spacious padding */
+    transition: all 0.2s ease;  /* Smooth hover effect */
+}
+
+.nav-link:hover {
+    color: white;  /* White text on hover */
+    transform: translateY(-1px);  /* Slight lift effect */
+}
+
+.nav-welcome {
+    color: white;  /* White text */
+    font-weight: 500;  /* Medium font weight */
+}
+
+/* Page Header */
+.page-header {
+    background: #f8fafc;  /* Light gray background */
+    padding: 2rem 0;  /* Spacious padding */
+    margin-bottom: 2rem;  /* Spacious margin */
+    border-bottom: 1px solid #e5e7eb;  /* Light gray border */
+}
+
+.page-title {
+    font-weight: 700;  /* Bold font weight */
+    color: #1e293b;  /* Dark gray text */
+    margin: 0;  /* No margin */
+}
+
+/* Search Section */
+.search-section {
+    background: white;  /* White background */
+    padding: 1.5rem;  /* Spacious padding */
+    border-radius: 0.5rem;  /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    margin-bottom: 2rem;  /* Spacious margin */
+}
+
+.search-input {
+    position: relative;  /* Position relative to parent */
+}
+
+.search-input i {
+    position: absolute;  /* Position absolute */
+    left: 1rem;  /* Position at left */
+    top: 50%;  /* Position at top */
+    transform: translateY(-50%);  /* Center vertically */
+    color: #64748b;  /* Dark gray text */
+}
+
+.search-input .form-control {
+    padding-left: 2.5rem;  /* Space for icon */
+}
+
+/* Post Cards */
+.post-card {
+    border: none;  /* No border */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;  /* Smooth hover transitions */
+}
+
+.post-card:hover {
+    transform: translateY(-5px);  /* Card lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Enhanced shadow on hover */
+}
+
+.card-img-wrapper {
+    height: 200px;  /* Fixed height */
+    overflow: hidden;  /* Contain image zoom effect */
+}
+
+.card-img-top {
+    height: 100%;  /* Full height */
+    object-fit: cover;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease;  /* Smooth zoom effect */
+}
+
+.post-card:hover .card-img-top {
+    transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+.card-title {
+    font-weight: 700;  /* Bold font weight */
+    margin-bottom: 1rem;  /* Spacious margin */
+}
+
+.card-title a {
+    color: #1e293b;  /* Dark gray text */
+    transition: color 0.2s ease;  /* Smooth hover effect */
+}
+
+.card-title a:hover {
+    color: #3b82f6;  /* Blue text on hover */
+}
+
+.post-meta {
+    display: flex;  /* Flexible layout */
+    gap: 1rem;  /* Spacious gap */
+    font-size: 0.875rem;  /* Slightly smaller font */
+    color: #64748b;  /* Dark gray text */
+    margin-bottom: 1rem;  /* Spacious margin */
+}
+
+.post-meta span {
+    display: flex;  /* Flexible layout */
+    align-items: center;  /* Center vertically */
+    gap: 0.5rem;  /* Spacious gap */
+}
+
+.card-footer {
+    background: none;  /* No background */
+    border-top: 1px solid #e5e7eb;  /* Light gray border */
+    padding: 1rem;  /* Spacious padding */
+}
+
+.btn-link {
+    color: #3b82f6;  /* Blue text */
+    text-decoration: none;  /* No underline */
+    padding: 0;  /* No padding */
+}
+
+.btn-link:hover {
+    color: #2563eb;  /* Darker blue on hover */
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;  /* Centered text */
+    padding: 4rem 0;  /* Spacious padding */
+    color: #64748b;  /* Dark gray text */
+}
+
+/* Footer Styles */
+.footer {
+    background: #1e293b;  /* Dark gray background */
+    color: white;  /* White text */
+    padding: 4rem 0 2rem;  /* Spacious padding */
+    margin-top: auto;  /* Push footer to bottom */
+}
+
+.footer-heading {
+    font-weight: 600;  /* Medium font weight */
+    margin-bottom: 1.5rem;  /* Spacious margin */
+}
+
+.footer-text {
+    color: #cbd5e1;  /* Light gray text */
+    line-height: 1.6;  /* Spacious line height */
+}
+
+.footer-links {
+    list-style: none;  /* No list style */
+    padding: 0;  /* No padding */
+    margin: 0;  /* No margin */
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;  /* Spacious margin */
+}
+
+.footer-links a {
+    color: #cbd5e1;  /* Light gray text */
+    text-decoration: none;  /* No underline */
+    transition: color 0.2s ease;  /* Smooth hover effect */
+    display: flex;  /* Flexible layout */
+    align-items: center;  /* Center vertically */
+    gap: 0.5rem;  /* Spacious gap */
+}
+
+.footer-links a:hover {
+    color: white;  /* White text on hover */
+}
+
+.social-links {
+    display: flex;  /* Flexible layout */
+    gap: 1rem;  /* Spacious gap */
+}
+
+.social-link {
+    color: white;  /* White text */
+    background: rgba(255, 255, 255, 0.1);  /* Light gray background */
+    width: 40px;  /* Fixed width */
+    height: 40px;  /* Fixed height */
+    border-radius: 50%;  /* Rounded corners */
+    display: flex;  /* Flexible layout */
+    align-items: center;  /* Center vertically */
+    justify-content: center;  /* Center horizontally */
+    transition: all 0.2s ease;  /* Smooth hover effect */
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);  /* Lighter gray background on hover */
+    color: white;  /* White text on hover */
+    transform: translateY(-2px);  /* Slight lift effect */
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.1);  /* Light gray border */
+    margin: 2rem 0;  /* Spacious margin */
+}
+
+.footer-bottom {
+    text-align: center;  /* Centered text */
+    color: #cbd5e1;  /* Light gray text */
+    font-size: 0.875rem;  /* Slightly smaller font */
+}
+ 
